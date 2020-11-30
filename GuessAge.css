@@ -1,0 +1,54 @@
+.warning {
+    color: red;
+}
+
+button {
+    border: none;
+    border-radius: 100px;    
+    height: 75px;
+    width: 200px;
+    background-color: greenyellow;
+}
+
+img {
+    opacity: 0;
+    position: absolute;
+    left: 0px;
+}
+p {
+    font-size: 30px;
+}
+
+div {
+    margin: 50px;
+}
+
+.popup {
+    height: 750px;
+    width: 1250px;
+    background-color: gray;
+}
+
+.resuslts {
+    color: wheat;
+    font-size: 50px;
+    background-color: green;
+    height: 150px;
+    width: 400px;
+    border-radius: 25px;
+    position: absolute;
+    left: 110px;
+}
+
+
+/*
+<div class="popup" id="popup">
+    <p>We also Have a YouTube channel go check it out!</p>
+</div>
+
+setTimeout(popup ,3000)
+
+function popup() {
+    
+} 3000;
+*/
