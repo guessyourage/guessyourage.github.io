@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="GuessAge.css">
+    <link rel="stylesheet" href="GuessAge.js">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+<body class="body">
+
+    <p class="warning">Warning: Only press the buttons once for the most accurate results.</p>
+
+<div class="firstQ" id="firstQ">
+    <p class="question">Which app do you use the most often?</p>
+    <div id="test">
+    <button class="young" onclick="young()">TikTok</button>
+    <button class="middle" onclick="middle()">Discord</button>
+    <button class="old" onclick="old()">Facebook</button>
+    </div>
+</div>
+
+<div class="secondQ">
+    <p class="question">Which activity do you like the most?</p>
+    <button class="young" onclick="young()">Something on your phone</button>
+    <button class="middle" onclick="middle()">Shopping</button>
+    <button class="old" onclick="old()">Reading</button>
+    <div></div>
+</div>
+
+<div class="thirdQ">
+    <p class="question">What do you use your phone for?</p>
+    <button class="young" onclick="young()">Socialmedia</button>
+    <button class="middle" onclick="middle()">Chatting</button>
+    <button class="old" onclick="old()">phonecalls</button>
+    <div></div>
+</div>
+
+<div class="fourthQ">
+    <p class="question">Where do you live?</p>
+    <button class="young">Europe</button>
+    <button class="middle">America</button>
+    <button class="old">Aurstalia</button>
+    <button class="young">Africa</button>
+    <button class="middle">Asia</button>
+    <div></div>
+</div>
+
+<div class="fifthQ">
+    <p class="question">When do you like waking up?</p>
+    <button class="young" onclick="young()">9-11</button>
+    <button class="middle" onclick="middle()">8-9</button>
+    <button class="old" onclick="old()">6-8</button>
+    <div></div>
+</div>
+
+<div class="sixthQ">
+    <p class="question">Which of these have the best smell?</p>
+    <button class="young" onclick="young()">Cookies</button>
+    <button class="middle" onclick="middle()">Coffe</button>
+    <button class="old" onclick="old()">Rain</button>
+    <div></div>
+</div>
+
+<div class="seventhQ">
+    <p class="question">What sweet food is your favourite?</p>
+    <button class="young"onclick="young()">Candy</button>
+    <button class="middle" onclick="middle()">Brownie</button>
+    <button class="old" onclick="old()">Dark Chocolate</button>
+    <div></div>
+</div>
+
+<div class="eightQ">
+    <p class="question">What normal food is your favourite?</p>
+    <button class="young" onclick="young()">Chicken</button>
+    <button class="middle" onclick="middle()">Hamburger</button>
+    <button class="old" onclick="old()">Stew</button>
+    <div></div>
+</div>
+
+<div class="ninethQ">
+    <p class="question">What is your favourite animal?</p>
+    <button class="young" onclick="young()">Hamster</button>
+    <button class="middle" onclick="middle()">Cat</button>
+    <button class="old" onclick="old()">Dog</button>
+    <div></div>
+</div>
+
+<button class="results" onclick="results()">Results</button>
+
+<p class="resultTxt" id="resultTxt"></p>
+
+
+
+<div class="images">
+    <img class="grandma" id="grandma" src="https://images.unsplash.com/photo-1442458370899-ae20e367c5d8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80" alt="">
+    <img class="middleAge" id="middleAge" src="https://images.unsplash.com/photo-1547624643-3bf761b09502?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80" alt="">
+    <img class="youngAge" id="youngAge" src="https://images.unsplash.com/photo-1554286923-8a066d8ec541?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80" alt="">
+</div>
+
+<style>
+    .warning {
+    color: red;
+}
+
+button {
+    border: none;
+    border-radius: 100px;    
+    height: 75px;
+    width: 200px;
+    background-color: greenyellow;
+}
+
+img {
+    opacity: 0;
+    position: absolute;
+    left: 0px;
+}
+p {
+    font-size: 30px;
+}
+
+div {
+    margin: 50px;
+}
+
+.popup {
+    height: 750px;
+    width: 1250px;
+    background-color: gray;
+}
+
+.resuslts {
+    color: wheat;
+    font-size: 50px;
+    background-color: green;
+    height: 150px;
+    width: 400px;
+    border-radius: 25px;
+    position: absolute;
+    left: 110px;
+}
+
+</style>
+
+
+
+<script>
+    var youngCount = 0;
+var middleCount = 0;
+var oldCount = 0;
+
+function young() {
+    youngCount++ + 1;
+
+    //document.getElementById("firstQ").style.display = "none";
+}
+
+function middle() {
+    middleCount++ + 1;
+}
+
+function old() {
+    oldCount++ + 1;
+}
+
+function results() {
+
+    console.log("LOL")
+    if (youngCount >= 5) {
+        document.getElementById("resultTxt").innerHTML = 'You are 0-21 years old';
+        document.getElementById("youngAge").style.opacity = "1";
+    }
+
+    if (middleCount >= 5) {
+        document.getElementById("resultTxt").innerHTML = 'You are 21-40 years old';
+        document.getElementById("middleAge").style.opacity = "1";
+    }
+
+    if (oldCount >= 5) {
+        document.getElementById("resultTxt").innerHTML = 'You are 40+ years old';
+        document.getElementById("grandma").style.opacity = "1";
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    if (oldCount == 3 && middleCount == 3) {
+        document.getElementById("resultTxt").innerHTML = 'You are 26+ years old';
+        document.getElementById("middleAge").style.opacity = "1";
+    }
+
+    if (oldCount == 3 && youngCount == 3) {
+        document.getElementById("resultTxt").innerHTML = 'You are 23+ years old';
+        document.getElementById("middleAge").style.opacity = "1";
+    }
+
+    if (youngCount == 3 && middleCount == 3) {
+        document.getElementById("resultTxt").innerHTML = 'You are 12+ years old';
+        document.getElementById("youngAge").style.opacity = "1";
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    if (oldCount == 2 && middleCount == 2) {
+        document.getElementById("resultTxt").innerHTML = 'You are 16+ years old';
+        document.getElementById("youngAge").style.opacity = "1";
+    }
+
+    if (oldCount == 2 && youngCount == 2) {
+        document.getElementById("resultTxt").innerHTML = 'You are 18+ years old';
+        document.getElementById("youngAge").style.opacity = "1";
+    }
+
+    if (youngCount == 3 && middleCount == 2) {
+        document.getElementById("resultTxt").innerHTML = 'You are 12+ years old';
+        document.getElementById("youngAge").style.opacity = "1";
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    if (oldCount == 4 && middleCount == 3) {
+        document.getElementById("resultTxt").innerHTML = 'You are 26+ years old';
+        document.getElementById("middleAge").style.opacity = "1";
+    }
+
+    if (oldCount == 4 && youngCount == 3) {
+        document.getElementById("resultTxt").innerHTML = 'You are 21+ years old';
+        document.getElementById("youngAge").style.opacity = "1";
+    }
+
+    if (youngCount == 4 && middleCount == 3) {
+        document.getElementById("resultTxt").innerHTML = 'You are 14+ years old';
+        document.getElementById("youngAge").style.opacity = "1";
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    if (oldCount == 3 && middleCount == 3) {
+        document.getElementById("resultTxt").innerHTML = 'You are 38+ years old';
+        document.getElementById("grandma").style.opacity = "1";
+    }
+
+    if (oldCount == 3 && youngCount == 3) {
+        document.getElementById("resultTxt").innerHTML = 'You are 25+ years old';
+        document.getElementById("middleAge").style.opacity = "1";
+    }
+
+    if (youngCount == 3 && middleCount == 3) {
+        document.getElementById("resultTxt").innerHTML = 'You are 14+ years old';
+        document.getElementById("youngAge").style.opacity = "1";
+    }
+}
+</script>
+
+
+
+
+
+    <script src="GuessAge.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+</html>
